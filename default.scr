@@ -1,0 +1,71 @@
+[main]
+    Hey! Do you want to create your user profile first?
+        Yes
+            Lets create your profile :call default.entity1
+                Your profile is now created! :continue
+            		 :call default.rent
+            			
+            			
+[profile]
+    bot1: What is your name
+    	user1:	{{name}}
+    			bot2: Thanks! Where are you from? {{name}}
+                	{{place}}
+                    	Super. We're all done :return
+                    	
+[rent]
+ Hi ,I am Travel bot.How can I help you?
+	flight search
+		sure! searching flights..
+	hotel search
+		sure searching hotels..
+	rent cars
+		sure! what Type?[[Suv,Sedan]]
+    	 Suv
+		  Ok, Booking SUV.
+	     Sedan
+	      Ok, Booking Sedan.
+    blank: :onException
+     I didn't understand that. Would you like a wallet or a card transaction?
+	    :return
+			 
+		
+[goto]
+ Welcome to the scripting tool!
+            Hi
+                Hey there. Do you want to continue or start from the beginning?
+                    Continue
+                        Sure thing!
+                    Start
+                        No worries
+[dynamic]
+    bot1: What is your name?
+        user1: {{name}}
+            bot2: Hello {{name}} :continue
+            	What do you want? {{botname}}
+            		yes
+            			OK {{name}}
+            		No
+            			Start :goto bot1
+            		
+[entity1]
+what is your name?
+ name
+   welcome {{name}}
+            		
+            			
+            		
+[time]
+	Hello. I?m a bot and I can tell you the time!
+        timeLabel: What is the time
+            The time is {{time}}
+[entity]
+	Welcome to the entity tool!
+		I want a {{color:blue}} shirt
+			Here are your options for a {{color}} shirt
+			
+[common]
+Hi
+    Hello
+Who are you?
+    I'm a bot that can help you with 
