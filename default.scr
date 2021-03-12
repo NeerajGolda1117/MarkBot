@@ -1,5 +1,5 @@
 [main]
-    Hey! Do you want to create your user profile first?
+    Hey! Do you want to create your new profile first?
         Yes
             Lets create your profile :call default.entity1
                 Your profile is now created! :continue
